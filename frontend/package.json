@@ -1,0 +1,8 @@
+{
+  "name": "carepulse-healthcare-analytics",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": { "dev": "vite", "build": "tsc -b && vite build", "preview": "vite preview" },
+  "dependencies": { "@vitejs/plugin-react": "latest", "axios": "latest", "framer-motion": "latest", "lucide-react": "latest", "react": "latest", "react-dom": "latest", "react-router-dom": "latest", "recharts": "latest" },
+  "devDependencies": { "typescript": "latest", "vite": "latest", "tailwindcss": "latest", "@types/react": "latest", "@types/react-dom": "latest" }
+}

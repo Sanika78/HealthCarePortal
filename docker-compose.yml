@@ -1,0 +1,19 @@
+services:
+  mongo:
+    image: mongo:7
+    ports: ["27017:27017"]
+    volumes: ["mongo_data:/data/db"]
+  api:
+    build: ./backend
+    environment:
+      MONGODB_URL: mongodb://mongo:27017
+      MONGODB_DB: healthcare_analytics
+      JWT_SECRET: change-this-in-production
+    ports: ["8000:8000"]
+    depends_on: [mongo]
+  web:
+    build: ./frontend
+    ports: ["5173:80"]
+    depends_on: [api]
+volumes:
+  mongo_data:
